@@ -20,7 +20,7 @@ const Skill = ({ name, x, y }: any) => {
 const Skills = () => {
   return (
     <>
-      <h2 className="font-bold text-8xl mt-64 w-full text-center mb-4">Skills</h2>
+      <h2 className="font-bold text-6xl mt-64 w-full text-center uppercase mb-4">Skills</h2>
       <div className=" h-[100vh] relative bg-circularLight dark:bg-circularDark lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd sm:bg-circularLightSm sm:dark:bg-circularDarkSm flex items-center justify-center">
         {/*  */}
 
@@ -35,12 +35,14 @@ const Skills = () => {
         <Skill name="JavaScript" x="20vw" y="6vw" />
         <Skill name="ReactJS" x="0vw" y="12vw" />
         <Skill name="NextJS" x="-20vw" y="-15vw" />
-        <Skill name="GatsbyJS" x="15vw" y="-12vw" />
+        <Skill name="Node" x="15vw" y="-12vw" />
         <Skill name="Github" x="32vw" y="-5vw" />
-        <Skill name="Web Design" x="0vw" y="-20vw" />
-        <Skill name="Figma" x="-25vw" y="18vw" />
-        {/* <Skill name="Firebase" x={-25} y={18} /> */}
+        <Skill name="NestJS" x="0vw" y="-20vw" />
+        <Skill name="Redux" x="-25vw" y="18vw" />
+        <Skill name="MongoDB" x="-15vw" y="21vw" />
         <Skill name="Tailwind CSS" x="18vw" y="18vw" />
+        <Skill name="Typescript" x="18vw" y="18vw" />
+        <Skill name="ExpressJS" x="18vw" y="18vw" />
       </div>
     </>
   );
