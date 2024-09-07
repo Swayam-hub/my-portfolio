@@ -1,4 +1,3 @@
-import { BackgroundBeamsWithCollisionDemo } from "@/components/BackgroundBeams";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import { CardHoverEffectDemo } from "@/components/ProjectCards";
@@ -12,14 +11,14 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
-      <WorkExperience />
-      <Skills />
-      <h2 className="font-bold text-8xl mt-64 w-full text-center">PROJECTS</h2>
+      {/* <WorkExperience /> */}
+      {/* <Skills />
+      <h2 className="font-bold text-6xl mt-64 w-full text-center">PROJECTS</h2>
       <div className="mt-16">
         {/* <CardHoverEffectDemo /> */}
-       <ExpandableCardDemo />
-      <TimelineDemo />
-      </div>
+       {/* <ExpandableCardDemo />
+      <TimelineDemo /> */}
+      {/* </div> */}
     </main>
   );
 }

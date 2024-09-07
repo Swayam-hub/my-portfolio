@@ -91,25 +91,38 @@ export function ExpandableCardDemo() {
                       {active.title}
                     </motion.h3>
                     <motion.h5
-                    
                       layoutId={`description-${active.description}-${id}`}
                       className="text-neutral-600 dark:text-neutral-400 text-base"
                     >
                       {active.description}
                     </motion.h5>
                   </div>
-
-                  <motion.a
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    href={active.ctaLink}
-                    target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-purple text-white"
-                  >
-                    {active.ctaText}
-                  </motion.a>
+                  {active.ctaLink && (
+                    <motion.a
+                      layout
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      href={active.ctaLink}
+                      target="_blank"
+                      className="px-4 py-3 text-sm rounded-full font-bold bg-purple text-white"
+                    >
+                      {active.ctaText}
+                    </motion.a>
+                  )}
+                  {active.github && (
+                    <motion.a
+                      layout
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      href={active.github}
+                      target="_blank"
+                      className="px-4 py-3 text-sm rounded-full font-bold bg-purple text-white"
+                    >
+                      Github
+                    </motion.a>
+                  )}
                 </div>
                 <div className="pt-4 relative px-4">
                   <motion.ul
@@ -120,10 +133,10 @@ export function ExpandableCardDemo() {
                     className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     <motion.li className="list-disc ml-4">
-                    {typeof active.content === "function"
-                      ? active.content()
-                      : active.content}
-                      </motion.li>
+                      {typeof active.content === "function"
+                        ? active.content()
+                        : active.content}
+                    </motion.li>
                   </motion.ul>
                 </div>
               </div>
@@ -162,7 +175,6 @@ export function ExpandableCardDemo() {
                 >
                   {card.description}
                 </motion.p>
-
               </div>
             </div>
           </motion.div>
@@ -207,7 +219,8 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "Created a comprehensive job portal for the users and the employers of Yamuna Nagar",
+    description:
+      "Created a comprehensive job portal for the users and the employers of Yamuna Nagar",
     title: "Jobsnagar",
     src: "/2.jpg",
     ctaText: "Visit",
@@ -215,30 +228,29 @@ const cards = [
     content: () => {
       return (
         <ul className="list-disc">
-            <li className="mb-4">
-              Streamlined the job application process by 50% through the
-              creation of a comprehensive job portal, leading to a dramatic
-              increase in applicant satisfaction and a more efficient hiring
-              process.
-            </li>
-            <li className="mb-4">
-              Implemented JWT, OTP authentication, and bycryptjs resulted in a
-              20% decrease in unauthorized access, bolstering system security
-              and improving overall user authentication
-            </li>
-            <li className="mb-4">
-              Implemented Email and Whatsapp Messaging for regular follow ups to
-              increase the active users
-            </li>
-            <li className="mb-4">
-              Tech Stack - NextJS, ReactJS, NestJS, TailwindCSS, MongoDB,
-              NodeJS, ExpressJS, Redis, Context API
-            </li>
-            <li className="italic mb-4">
-              WIP - Push Notifications, One to One Chat For Candidate and
-              Employer, Whatsapp Template Based Messaging
-            </li>
-          </ul>
+          <li className="mb-4">
+            Streamlined the job application process by 50% through the creation
+            of a comprehensive job portal, leading to a dramatic increase in
+            applicant satisfaction and a more efficient hiring process.
+          </li>
+          <li className="mb-4">
+            Implemented JWT, OTP authentication, and bycryptjs resulted in a 20%
+            decrease in unauthorized access, bolstering system security and
+            improving overall user authentication
+          </li>
+          <li className="mb-4">
+            Implemented Email and Whatsapp Messaging for regular follow ups to
+            increase the active users
+          </li>
+          <li className="mb-4">
+            Tech Stack - NextJS, ReactJS, NestJS, TailwindCSS, MongoDB, NodeJS,
+            ExpressJS, Redis, Context API
+          </li>
+          <li className="italic mb-4">
+            WIP - Push Notifications, One to One Chat For Candidate and
+            Employer, Whatsapp Template Based Messaging
+          </li>
+        </ul>
       );
     },
   },
@@ -247,20 +259,28 @@ const cards = [
     title: "Movie Time",
     src: "/10.jpg",
     ctaText: "Visit",
-    ctaLink: "https://movie-time-sable.vercel.app",
+    ctaLink: "https://movie-time-ochre-one.vercel.app/",
+    github: "https://github.com/Swayam-hub/movie-time",
     content: () => {
       return (
-        <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
-        </p>
+        <ul className="list-disc">
+          <li className="mb-4">
+            Comprehensive Search and Detail Pages: Developed a user-friendly
+            platform with search functionality and detailed movie pages,
+            providing in-depth information about each film.
+          </li>
+          <li className="mb-4">
+            Streaming Availability Solution: Addressed the common problem of
+            finding where movies are available—whether in cinemas or on various
+            OTT platforms—by integrating real-time data, helping users easily
+            locate where to watch.
+          </li>
+          <li className="mb-4">
+            Enhanced User Experience: Streamlined the process of discovering and
+            accessing movies, ensuring users no longer struggle to find their
+            favorite content across multiple platforms.
+          </li>
+        </ul>
       );
     },
   },
@@ -270,42 +290,61 @@ const cards = [
     title: "Scout 4 Sports",
     src: "/Web 1920 – 1.png",
     ctaText: "Visit",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "",
+    github: "https://github.com/Swayam-hub/sports-website",
     content: () => {
       return (
-        <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br /> Their
-          songs often reflect themes of aggression, social issues, and personal
-          struggles, capturing the essence of the heavy metal genre. With a
-          career spanning over four decades, Metallica has released numerous hit
-          albums and singles that have garnered them a massive fan following
-          both in the United States and abroad.
-        </p>
+        <ul className="list-disc">
+          <li className="mb-4">
+            Role-Based Registration: Developed a platform allowing users to
+            register as either players or coaches, fostering targeted
+            connections within the sports community.
+          </li>
+          <li className="mb-4">
+            Player-Coach Matching: Implemented a matchmaking feature where
+            players can find relevant coaches based on their needs, and coaches
+            can discover potential players.
+          </li>
+          <li className="mb-4">
+            Profile Comparison: Added functionality to compare profiles of other
+            players, enabling better insights into competitors skills and
+            achievements.
+          </li>
+          <li className="mb-4">
+            Community Growth: Designed with the initiative to promote sports and
+            encourage participation by simplifying the process of connecting
+            players with the right coaching support.
+          </li>
+        </ul>
       );
     },
   },
   {
-    description: "Stake",
-    title: "Aap Ka Suroor",
-    src: "https://assets.aceternity.com/demos/aap-ka-suroor.jpeg",
+    description: "Tried to create game for the users",
+    title: "Plinko",
+    src: "/12.jpg",
     ctaText: "Visit",
-    ctaLink: "https://movie-time-sable.vercel.app/",
+    ctaLink: "https://silver-cris-31.tiiny.site/",
+    github: "https://github.com/Swayam-hub/stake",
     content: () => {
       return (
-        <p>
-          Himesh Reshammiya, a renowned Indian music composer, singer, and
-          actor, is celebrated for his distinctive voice and innovative
-          compositions. Born in Mumbai, India, he has become a prominent figure
-          in the Bollywood music industry. <br /> <br /> His songs often feature
-          a blend of contemporary and traditional Indian music, capturing the
-          essence of modern Bollywood soundtracks. With a career spanning over
-          two decades, Himesh Reshammiya has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
-        </p>
+        <ul className="list-disc">
+          <li className="mb-4">
+            Core Gameplay Mechanics: Developed a classic Plinko game featuring a
+            simple ball drop and striking mechanism, capturing the essence of
+            traditional Plinko gameplay.
+          </li>
+          <li>
+            User Engagement: Created an interactive and engaging experience by
+            focusing on straightforward gameplay, appealing to both novice and
+            experienced players.
+          </li>
+          <li>
+            Responsive Design: Ensured the game runs smoothly on multiple
+            devices, maintaining a consistent player experience across
+            platforms.
+          </li>
+        </ul>
       );
     },
   },

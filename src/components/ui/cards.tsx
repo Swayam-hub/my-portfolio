@@ -17,7 +17,7 @@ const ProjectCards = ({
   return (
     <>
       {items.map((item, idx) => (
-        <div className="">
+        <div key={idx}>
           <div className={`shadow shadow-black rounded-lg `} key={idx}>
             <Link className="max-w-sm" href={item.link}>
               <Image
