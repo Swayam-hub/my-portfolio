@@ -25,7 +25,7 @@
 //             <p className="text-base mt-3 font-normal">
 //               I bring ideas to life with dynamic web solutions. Specializing in
 //               JavaScript, I craft interactive, efficient, and user-friendly
-//               websites that leave a lasting impression. Let&pos;s turn your vision
+//               websites that leave a lasting impression. Lets turn your vision
 //               into reality!
 //             </p>
 //             <div className="text-base mt-3 flex flex-row items-center justify-center">
@@ -193,7 +193,7 @@ const Hero = () => {
           />
           <div className="col-span-2">
             <TextGenerateEffect
-              words="Hello I&pos;m Swayam Budhiraja"
+              words="Hello I am Swayam Budhiraja"
               className="text-4xl mb-3"
             />
             Turning Ideas Into Interactive
@@ -201,7 +201,7 @@ const Hero = () => {
             <p className="text-base mt-3 font-normal">
               I bring ideas to life with dynamic web solutions. Specializing in
               JavaScript, I craft interactive, efficient, and user-friendly
-              websites that leave a lasting impression. Let&pos;s turn your vision
+              websites that leave a lasting impression. Lets turn your vision
               into reality!
             </p>
             <div className="text-base mt-3 flex flex-row items-center justify-center">
